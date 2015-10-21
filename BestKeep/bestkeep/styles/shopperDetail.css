@@ -1,0 +1,68 @@
+.main {width: 100%;height: 100%;position: relative;overflow: hidden;}
+.main .btnBack {
+    position: absolute;top: 35px;left: 15px;z-index: 99;
+    display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;
+    width: 50px;height: 50px;background-color: rgba(255,255,255,0.9);border-radius: 50%;}
+.main .btnBack::after{
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+    -webkit-transform: rotate(-45deg);
+    margin-left: 4px;
+}
+.goodsDetailWrap {width: 100%;height: 100%;position: relative;overflow: hidden;z-index: 0;}
+.goodsDetailWrap .content{position: absolute;width: 100%;height:auto;left: 0;top: 0;background-color: #ffffff;}
+.goodsDetailWrap .content .adWrap {width: 100%;position: relative;}
+.goodsDetailWrap .content .adWrap .adImage {width: 100%;height: 100%;}
+.goodsDetailWrap .content .adWrap .adImage img {width: 100%;height: auto;}
+.goodsDetailWrap .content .adWrap .btnWrap {position: absolute;z-index: 9;right: 1em;bottom: 80px;}
+
+.goodsDetailWrap .content .adWrap .btnWrap .btnCollect,.goodsDetailWrap .content .adWrap .btnWrap .btnShare{
+    display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: center;margin: 1em 0;
+    width: 50px;height: 50px;background-color: rgba(255,255,255,0.9);border-radius: 50%;position: relative;
+    background-image: none;top: 0;left: 0;
+}
+.goodsDetailWrap .content .adWrap .btnWrap .btnCollect::after{
+    display: block;width: 24px;height: 24px;content: "";
+    background-image: url("../images/wholenav_ico_collect00_n_uncheck@2x.png");
+    background-repeat: no-repeat;background-position: center center;background-size: 100%;
+}
+.goodsDetailWrap .content .adWrap .btnWrap .btnCollect.collected::after{background-image: url("../images/wholenav_ico_collect00_n_check@2x.png");}
+.goodsDetailWrap .content .adWrap .btnWrap .btnShare::after{
+    display: block;width: 24px;height: 24px;content: "";
+    background-image: url("../images/btn_share.png");
+    background-repeat: no-repeat;background-position: center center;background-size: 100%;
+}
+
+.goodsDetailWrap .content .titleWrap {text-align: center; padding:15px;}
+.goodsDetailWrap .content .titleWrap .goodsName{font-size: 16px;word-break: break-all;}
+.goodsDetailWrap .content .titleWrap .price{ margin: 2em auto;display: inline-block;height: 30px;  white-space: nowrap;width: 100%;}
+.goodsDetailWrap .content .titleWrap .price span {display: inline-block;line-height: 1em;margin: 0 10px;vertical-align: text-bottom;position: relative;bottom: 0;}
+.goodsDetailWrap .content .titleWrap .price .salePrice {font-size:28px;;color: #ff2aa6;bottom: -2px;}
+.goodsDetailWrap .content .titleWrap .price .labelPrice {font-size:14px;color: #454545;text-decoration: line-through;}
+.goodsDetailWrap .content .titleWrap .price .btnBuy {
+    background-color: #ff2aa6;color: #ffffff;
+    border-radius: 1em;
+    padding: 0.5em 10%;
+}
+.flotPriceWrap{
+    position: absolute;z-index: 10;bottom: -100px;width: 100%;text-align: center;white-space: nowrap;
+    -webkit-transition: bottom 0.3s;transition: bottom 0.3s;
+}
+.flotPriceWrap.in {
+    bottom:0;
+}
+.flotPriceWrap .flotPrice {width: 80%;padding: 8px; margin: 10px auto; background-color: rgba(255,255,255,0.6);box-shadow: 0 0 3px gray;border-radius: 2em;position: relative;text-align: left;}
+.flotPriceWrap .flotPrice span {display: inline-block;line-height: 1em;margin: 0 5px;vertical-align: text-bottom;position: relative;bottom: -1px;}
+.flotPriceWrap .flotPrice .salePrice {font-size:28px;;color: #ff2aa6;bottom: -2px;  margin-left: 15px;}
+.flotPriceWrap .flotPrice .labelPrice {font-size:14px;color: #454545;text-decoration: line-through;}
+.flotPriceWrap .flotPrice .btnBuy {
+    background-color: #ff2aa6;color: #ffffff;
+    border-radius: 1em;
+    padding: 0.5em 7%;
+    position: absolute;right: 0;
+    bottom: 6px;  margin-right: 0.5em;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <title></title>
+    <script src="service.js"></script>
+    <script>
+            //web界面点击调用原生代码
+//            $("#a1").on("click",function(){
+//                console.log("js点击事件，调用原生方法");
+//                tapA();
+//                //模拟原生相应js点击事件的的callback
+////                OBJC.executeJs(window.randomKey,"{\"a\":\"响应js点击事件\"}");
+//            });
+
+            //js注册一个给原生调用的函数
+
+
+            //模拟原生调用注册的函数
+//            OBJC.executeJs("init","{\"a\":\"原生调用init\"}");
+        OBJC.regJs("init",function(data){
+            alert("init:"+data);
+        });
+        function message(){
+            OBJC.executeNative(
+                    OBJC.config.method.MESSAGE.name,
+                    OBJC.config.method.MESSAGE.param,
+                    function(data){
+                        alert("message callback");
+                    }
+            )
+        }
+        function open(){
+            OBJC.executeNative(
+                    OBJC.config.method.OPEN.name,
+                    OBJC.config.method.OPEN.param
+            )
+        }
+        function close(){
+            OBJC.executeNative(
+                OBJC.config.method.CLOSE.name,
+                OBJC.config.method.CLOSE.param
+            )
+        }
+    </script>
+
+</head>
+<body>
+<a href="javascript:open();" id="a1" >OBJC open</a><br /><br />
+<a href="javascript:close();" id="a2" >OBJC back</a><br /><br />
+<a href="javascript:message();" id="a3" >OBJC messge</a>
+
+</body>
+</html>

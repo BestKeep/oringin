@@ -1,0 +1,11 @@
+.header .title {color: #eb7302; background-image: url("../images/shoppingnav_img_titel00_n_n@3x.png"); background-position: center center; background-repeat: no-repeat; background-size: auto 35%;}
+
+.activitySlider {width: 100%; height: 100%;}
+.activitySlider .content {width: 76.6666%; height: 100%; position: relative; margin: 0 auto;}
+.activitySlider .content .activityList {display: block; width: 5000px; position: absolute; height: 100%;}
+.activitySlider .content .activityList .activity {float: left; text-align: center; height: 100%; display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center;-webkit-transition: opacity 0.3s;transition: opacity 0.3s;opacity: 0;}
+.activitySlider .content .activityList .activity.inited{opacity: 1;}
+.activitySlider .content .activityList .activity .ad {width: 91.3043%; margin: 0 auto; box-shadow: 0 0 0.4rem 0 #999; -webkit-box-shadow: 0 0 0.4rem 0 #999; background-color: #fff;}
+.activitySlider .content .activityList .activity.cur .ad {opacity: 1; text-align: center;}
+.activitySlider .content .activityList .activity .ad .hgTitle {overflow: hidden; font-size: 1.8rem; line-height:1.6rem; white-space:nowrap; padding:6.6666% 0 6.6666% 0; color: #ec7300; display: -webkit-box; -webkit-box-align: center; -webkit-box-pack: center;}
+.activitySlider .content .activityList .activity .ad .price {font-size: 1rem; line-height: 1.4em; margin: 0 0.7rem 0.7rem 0.7rem; background-color: #ff2aa7; color: #fff; border-radius: 0.4rem;}

@@ -1,0 +1,40 @@
+.main {overflow-y: hidden;}
+.main .scroller {width: 100%; position: absolute; padding: 0 4.1666% 0 4.1666%;}
+.main .scroller *{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
+.main .scroller #top {}
+.main .scroller #bottom {margin-top: 4.7222%;min-height:100%;}
+
+.header .title {color: #ff2aa7; background-image: url("../images/newproductnav_img_titel00_n_n@3x.png"); background-position: center center; background-repeat: no-repeat; background-size: auto 41.6666%;}
+
+.xinpin {width: 100%; height: auto;}
+.xinpin .content {width: 100%; height: auto;}
+.xinpin .content .xinpinList {display: block; width: 100%;}
+.xinpin .content .xinpinList .xinpinItem {width: 100%; margin-bottom: 4.4444%;-webkit-transition: opacity 0.3s;transition: opacity 0.3s;opacity: 0;}
+.xinpin .content .xinpinList .xinpinItem.inited {opacity: 1;}
+.xinpin .content .xinpinList .xinpinItem .ad {}
+.xinpin .content .xinpinList .xinpinItem .text {background-color: #fff; position: relative; color: #262626;}
+.xinpin .content .xinpinList .xinpinItem .text .brandLogo {width: 24.39%; position: absolute; right: 2.439%; bottom: 15.6863%;}
+.xinpin .content .xinpinList .xinpinItem .text .brandLogo .lastTime {color: #ff2aa7; position: absolute; width: 100%; bottom: 25%; text-align: center; font-size: 1rem; line-height: 1em;}
+.xinpin .content .xinpinList .xinpinItem .text .brandLogo .adImage {background-color: transparent;}
+.xinpin .content .xinpinList .xinpinItem .text .brandName {font-size: 1.5rem; line-height: 1.3rem; padding: 2.439% 0 2.439% 4.878%;}
+.xinpin .content .xinpinList .xinpinItem .text .discount {color: #ff2aa7; font-size: 1.5rem; line-height: 1.3rem; padding: 0 0 2.439% 4.878%;}
+.xinpin .content .xinpinList .xinpinItem .text .discount span {color: #727272; margin-left: 0.5rem; font-size: 1rem;}
+
+.xinpin .content .xinpinList .xinpinItem.type11 {}
+.xinpin .content .xinpinList .xinpinItem.type12 {}
+.xinpin .content .xinpinList .xinpinItem.type33 {}
+.xinpin .content .xinpinList .xinpinItem.type11 .text {}
+.xinpin .content .xinpinList .xinpinItem.type12 .text {}
+.xinpin .content .xinpinList .xinpinItem.type33 .text {color: #ff2aa7;}
+
+.carousel {background-color: #fff; margin-top: 4.7222%;}
+.carousel .imageList {display: block; width: 100%; height: 100%; position: relative; overflow: hidden;}
+.carousel .imageList .item {width: 100%;}
+.carousel .navList {position: absolute; z-index : 10; bottom: 3.0303%; right: 3.0488%;}
+.carousel .navList .item {display: inline-block; width: 0.5rem; height: 0.5rem; margin: 0.1rem; border-radius: 50%; background-color: #fff; box-shadow: 0rem 0rem 0.1rem black;}
+.carousel .navList .item.cur {background-color: #ff2aa7;}
+
+.static-wrap {margin-bottom: 4.4444%;}
+.static-wrap .top-ten-face {width: 48.7805%; float: left;}
+.static-wrap .coupons-face {width: 48.7805%; float: right;}
+.imgLoad{ opacity:1 !important; -webkit-transition: opacity 0.7s;transition: opacity 0.7s;}

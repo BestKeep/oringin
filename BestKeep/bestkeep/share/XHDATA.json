@@ -1,0 +1,10 @@
+{
+    "REFUNDREASON":[
+        {"code":"1","text":"七天无理由退换货","textFlag":0,"imageFlag":0},
+        {"code":"2","text":"不喜欢商品的颜色","textFlag":0,"imageFlag":0},
+        {"code":"3","text":"尺码大小不合适","textFlag":0,"imageFlag":0},
+        {"code":"4","text":"收到到的商品和描述不符","textFlag":0,"imageFlag":0},
+        {"code":"5","text":"质量问题","textFlag":0,"imageFlag":1},
+        {"code":"6","text":"其他原因","textFlag":0,"imageFlag":0}
+    ]
+}

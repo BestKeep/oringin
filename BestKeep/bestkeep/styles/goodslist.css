@@ -1,0 +1,9 @@
+
+.layout-wrap{padding-top:0;}
+.goodsList .goodsItem{display: block;width: 100%;background-color:#fff;max-height: 201px;}
+.goodsList .goodsItem .goods .ad{width: 40%;}
+.goodsList .goodsItem .goods .text{position: relative;bottom: 210px;left: 42%;width: 55%; }
+.goodsList .goodsItem .goods .text .name{font-size: 2rem;font-size: bold;}
+.goodsList .goodsItem .goods .text .salePrice{ color:rgb(127,127,127);font-size: 1.6rem;}
+.goodsList .goodsItem .goods .text .salePrice span{color:rgb(255,102,0);font-weight: bold;font-size: 2rem;}
+.goodsList .goodsItem .goods .text .discount{clear: right;}

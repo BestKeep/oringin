@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>商品列表</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="stylesheet" href="public.css?20150701">
+    <link rel="stylesheet" href="productList.css?20150701">
+    <link rel="stylesheet" href="goodslist.css">
+    <script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile.events.min.js"></script>
+    <script type="text/javascript" src="template.js"></script>
+    <script type="text/javascript" src="iscroll-probe-X.js"></script>
+    <script type="text/javascript" src="service.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+    <script type="text/javascript" src="bannerProductList.js"></script>
+    <style>
+      
+    </style>
+    
+</head>
+<body>
+<div class="view" id="view"></div>
+
+<script id="tHeader" type="text/html">
+    <div class="header" >
+        <a class="btn btnBack" id="btnBack"><span>返回上级页面名称</span></a>
+        <div class="title" id="titleText">本级页面名称<div>
+        <a class="btn btnCollect" id="btnCollect"></a>
+        <a class="btn btnQuery" id="btnQuery"></a>
+    </div>
+</script>
+<script id="tNav" type="text/html">
+    <header class="header">
+       <ul class="Menulist">
+                <li class="active" id="top"><a href="#">TOP</a></li>
+                <li><a href="#" id="global">全球购</a></li>
+                <li><a href="#" id="shirt">T-SHIRT</a></li>
+        </ul>
+    </header>
+</script>
+<script id="tQuery" type="text/html">
+    <div class="queryWrapParent"  id="queryWrap">
+        <div class="queryWrap">
+            <ul>
+                <li class="btn btnShowHas" id="btnShowHas"><span class="text">显示有货</span><span class="icon"></span></li>
+                <li class="btn btnSortlow" id="btnPriceLow"><span class="text">价格&nbsp;&nbsp;&nbsp;低</span><span class="icon"></span></li>
+                <li class="btn btnSortHigh" id="btnPriceHigh"><span class="text">价格&nbsp;&nbsp;&nbsp;高</span><span class="icon"></span></li>
+                <li class="btn btnChoose" id="btnCategory"><span class="text">选择品类</span><span class="icon"></span></li>
+                <li class="btn btnReset" id="btnReset"><span class="text">恢复默认</span><span class="icon"></span></li>
+            </ul>
+            <div class="triangle"></div>
+        </div>
+    </div>
+</script>
+<script id="tBody" type="text/html">
+<!--    {{include "tNav"}}-->
+    <div class="layout-wrap">
+        <div class="main" id="main"></div>
+    </div>
+</script>
+<script id="tProductList" type="text/html">
+    <div class="productList" id="productList">
+        <div class="content">
+            <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+            </div>
+            <div class="goodsWrap">
+                <ul class="goodsList" id="goodsList">
+                    
+                </ul>
+            </div>
+            <div id="pullUp">
+                <span class="pullUpLabel"></span>
+            </div>
+        </div>
+<!--        {{include "tQuery"}}-->
+    </div>
+</script>
+<script id="tGoodsList" type="text/html">
+   <li class="goodsItem " id="123123">
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="1.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li>
+   <li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="2.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="3.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="4.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="5.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="6.jpg"></div>
+            </div>
+           <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="7.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="8.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li><li class="goodsItem " id="123123" >
+        <div class="goods" data-id="1212351" data-title="asdsadsad">
+            <div class="ad">
+                <div class="adImage" data-ref="9.jpg"></div>
+            </div>
+            <div class="text">
+                <div class="up"><div class="name">测试商品名</div></div>
+                <div class="down">
+                    <div class="salePrice">会员价:<span>￥111</span></div>
+                    <div class="labelPrice">市场价:￥99</div>
+                    <div class="discount">糖赋:50.00%</div>
+                    <div class="fenxiang"></div>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+.main {}
+.productList {position: relative;width: 100%;height: 100%;overflow: hidden;}
+.productList .content {position: absolute;width: 100%;height: auto; padding:0 4.4444% 0 4.4444%;}
+.bannerImage {width: 100%; margin-bottom: 4.4444%;}
+.goodsWrap {margin-top: 5.2222%;}
+.goodsList {width: 100%; height: auto;}
+.goodsList .goodsItem{
+    display:inline-block;width: 47.5609%;margin-bottom: 4.878%;-webkit-transition: opacity 0.3s;transition: opacity 0.3s;opacity: 0;
+}
+.goodsList .goodsItem.inited{opacity: 1;}
+.goodsList .goodsItem.big{
+    width: 100%;display: block;clear: both;
+}
+.goodsList .goodsItem .goods {
+    position: relative;
+}
+.goodsList .goodsItem .goods .ad {position: relative;}
+.goodsList .goodsItem .goods .ad {}
+.goodsList .goodsItem .goods .ad .iconVideo{
+    position: absolute;width:20px;height: 20px;top: 5px;right: 5px;border-radius: 50%;
+    background-image: url("../images/wholelist_ico_video00_n_n@2x.png");background-size: 100%;
+    background-position: center center;background-repeat: no-repeat;
+}
+.goodsList .goodsItem .goods .ad .saleOut{
+    width: 100%;height: 100%;position: absolute;top: 0;left: 0;background-color: rgba(0,0,0,0.7);
+    background-image: url("../images/icon_saleout.png");background-position: center center;background-repeat: no-repeat;background-size: 50%;
+}
+
+.goodsList .goodsItem .goods .text{
+   position: absolute;right: -0.3rem; bottom: 1.4rem;line-height: 2.6rem;
+   border-left: 1.5rem; border-top: 0rem; border-bottom: 0rem; border-right: 0.4rem;
+   -webkit-border-image: url(../images/wholelist_bg_title00_right_n.png) 0 14.5833% 0 81.25% stretch;
+}
+/*.goodsList .goodsItem .goods .text::after {*/
+    /*content: "";display: block;height: 110%;width: 15px;position: absolute;top: 0px;left: -15px;background-repeat: no-repeat;*/
+    /*background-image: url("../images/wholelist_bg_title00_right_n@2x.9.png");background-position: left top;*/
+    /*background-size: auto 100%;*/
+/*}*/
+/*.goodsList .goodsItem .goods .text::before {*/
+    /*content: "";display: block;height: 110%;width: 5px;position: absolute;top: 0;right: -5px;background-size: auto 100%;*/
+    /*background-image: url("../images/wholelist_bg_title00_right_n@2x.9.png");background-position: right top;background-repeat: no-repeat;*/
+/*}*/
+
+.goodsList .goodsItem .goods .text .salePrice{display: inline-block;font-size:1.2rem;color: #fff; margin-left:-0.6rem; margin-right: 0.2rem;height: 100%;}
+.goodsList .goodsItem .goods .text .labelPrice{display: inline-block;text-decoration: line-through;font-size:0.8rem;margin-right: 0.4rem;color:#4c4c4c;height: 100%;}
+
+
+.btnCollect{
+    position:absolute;top:13px;right:15px;display: block;width: 24px;height: 24px;background-image: url("../images/wholenav_ico_collect00_n_uncheck@2x.png");
+    background-repeat: no-repeat;background-position: center center;background-size: 100%;
+}
+.btnCollect.collected{background-image: url("../images/wholenav_ico_collect00_n_check@2x.png")}

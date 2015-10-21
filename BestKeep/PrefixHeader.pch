@@ -1,0 +1,59 @@
+//
+//  PrefixHeader.pch
+//  BestKeep
+//
+//  Created by 魏鹏 on 15/8/18.
+//  Copyright (c) 2015年 utouu. All rights reserved.
+//
+
+#ifndef BestKeep_PrefixHeader_pch
+#define BestKeep_PrefixHeader_pch
+#import "Common.h"
+#import "Masonry.h"
+#import "BaseViewController.h"
+#import "UIColor+CJCategory.h"
+#import "AppControlManager.h"
+#import "InterfaceURLs.h"
+#import "BKService.h"
+#import "UIImageView+WebCache.h"
+#import "ShowMessage.h"
+#import "DeliverAddressServer.h"
+#import "MJExtension.h"
+#import "GoodsDataModel.h"
+#import "GoodsDTO.h"
+#import "GoodsDetailDTO.h"
+#import "PropertyList.h"
+#import "PropertyReList.h"
+#import "ReserveList.h"
+#import "ImgList.h"
+#import "ParamList.h"
+#import "LoginController.h"
+#import "BKNavigationController.h"
+#import "LoadingView.h"
+#define SysVer ([[[UIDevice currentDevice] systemVersion] floatValue])
+#define COLOR_01 [UIColor fromHexValue:0xE5E5E5]
+#define COLOR_02 [UIColor fromHexValue:0x5f646e]
+#define COLOR_03 [UIColor fromHexValue:0xf0efef]
+#define COLOR_04 [UIColor fromHexValue:0x03bfa0]
+#define COLOR_05 [UIColor fromHexValue:0x999999] //中灰
+#define COLOR_06 [UIColor fromHexValue:0xFF6600] //橘黄色
+#define COLOR_07 [UIColor fromHexValue:0x5F646E] //深灰
+#define COLOR_08 [UIColor fromHexValue:0xf7f7f7] //浅灰
+#define COLOR_09 [UIColor fromHexValue:0x666666] //浅灰
+#define COLOR_10 [UIColor fromHexValue:0x333333] //黑色
+#define COLOR_11 [UIColor fromHexValue:0xc8c8c8] //黑色
+
+#define COLOR_12       [UIColor colorWithRed:45/255.0f green:182/255.0f blue:140/255.0f alpha:1]
+#define COLOR_14 [UIColor fromHexValue:0x03B598] //BESTKEEP绿
+#define COLOR_13 [UIColor fromHexValue:0x03bfa0] //BESTKEEP绿
+
+
+
+
+//空值判断
+#define checkNull(__X__)        (__X__) == [NSNull null] || (__X__) == nil ? @"" : [NSString stringWithFormat:@"%@", (__X__)]
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
